@@ -1,0 +1,17 @@
+REM sleep the display to lock the screen and exit the terminal
+DELAY 2000
+GUI SPACE
+DELAY 200
+STRING Terminal
+DELAY 2000
+ENTER
+DELAY 2000
+STRING (sleep 2 && pmset displaysleepnow) &
+ENTER
+DELAY 500
+STRING disown
+ENTER
+DELAY 500
+GUI q
+DELAY 200
+ENTER

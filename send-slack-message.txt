@@ -1,0 +1,12 @@
+REM Sends a slack message as the current user
+DELAY 2000
+GUI SPACE
+DELAY 200
+STRING Slack
+DELAY 2000
+ENTER
+
+REM Slack may have to launch and connect, that takes about 8 seconds...
+DELAY 8000
+STRING /giphy win
+ENTER

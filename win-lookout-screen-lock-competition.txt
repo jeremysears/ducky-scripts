@@ -1,0 +1,42 @@
+REM At Lookout, we're running a competition to educate people about locking
+REM their workstations.  The rules are simple, if you see an unlocked computer
+REM send '/lockme <username>' as a Slack message, and you will be rewarded
+REM with a point.  The user with the unlocked machine recieves a slack message
+REM instructing them on how to lock their machine.  This automates the process
+REM and wins me the competition.
+
+REM First fire up Slack.
+
+DELAY 2000
+GUI SPACE
+DELAY 200
+STRING Slack
+DELAY 2000
+ENTER
+DELAY 500
+
+REM Slack may have to launch and connect, that takes about 8 seconds...
+REM Meanwhile...  Let's lock down the machine.
+
+GUI SPACE
+DELAY 200
+STRING Terminal
+DELAY 2000
+ENTER
+DELAY 2000
+STRING (sleep 10 && pmset displaysleepnow) &
+ENTER
+DELAY 500
+STRING disown
+ENTER
+DELAY 500
+GUI q
+DELAY 200
+ENTER
+DELAY 500
+
+REM Quitting drops us back into slack to score a point...
+
+STRING /lockme jeremy.sears
+ENTER
+
